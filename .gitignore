@@ -1,0 +1,10 @@
+config.yaml
+*.db
+__pycache__/
+*.pyc
+.env
+.DS_Store
+node_modules/
+native-app/android/
+native-app/ios/
+*.log

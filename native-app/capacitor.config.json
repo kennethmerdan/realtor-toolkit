@@ -1,0 +1,20 @@
+{
+  "appId": "com.nexalending.realtortoolkit",
+  "appName": "Realtor Hub",
+  "webDir": "www",
+  "server": {
+    "url": "https://your-mobile.streamlit.app",
+    "cleartext": false
+  },
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    },
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#1e40af"
+    }
+  },
+  "ios": { "allowsLinkPreview": false },
+  "android": { "allowMixedContent": false }
+}

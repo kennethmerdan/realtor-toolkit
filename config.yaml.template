@@ -1,0 +1,31 @@
+# Realtor Toolkit Configuration
+# Copy to config.yaml and fill in your keys
+
+# AI Content Generation
+openai_api_key: "sk-..."
+
+# SMS Notifications (Twilio)
+twilio_account_sid: "AC..."
+twilio_auth_token: "..."
+twilio_from_number: "+1..."
+
+# CRM Integration (Go High Level)
+ghl_api_key: "..."
+ghl_location_id: "..."
+
+# Payments (Stripe)
+stripe_secret_key: "sk_..."
+stripe_webhook_secret: "whsec_..."
+
+# Email (Gmail App Password)
+gmail_user: "your@gmail.com"
+gmail_app_password: "xxxx xxxx xxxx xxxx"
+
+# Online Presence Auditing
+google_places_api_key: "AIza..."
+
+# Broker Info
+broker_name: "Kenny Merdan"
+broker_company: "NEXA Lending"
+broker_email: "kenny@applywithkenny.com"
+broker_phone: ""
