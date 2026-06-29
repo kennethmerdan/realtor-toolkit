@@ -18,7 +18,7 @@ st.markdown("""
 
 db = DataManager()
 st.title("📱 Realtor Hub")
-st.caption("Mobile App · NEXA Lending")
+st.caption("Mobile App · Kenny Merdan")
 
 realtors = db.get_all_realtors()
 if not realtors:

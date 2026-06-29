@@ -6,7 +6,7 @@ st.set_page_config(page_title="Realtor Portal", page_icon="🏡", layout="wide")
 db = DataManager()
 
 st.title("🏡 Realtor Content Portal")
-st.caption("Powered by NEXA Lending · Kenny Merdan")
+st.caption("Powered by Kenny Merdan")
 
 realtors = db.get_all_realtors()
 if not realtors:

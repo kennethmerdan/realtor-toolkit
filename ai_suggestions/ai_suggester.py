@@ -42,12 +42,12 @@ As your trusted local real estate expert, I'm here to help you every step of the
 
 1. The local market is constantly evolving — staying informed is key.
 2. Working with an experienced professional saves you time and money.
-3. I partner with NEXA Lending to offer competitive mortgage rates.
+3. Working with a trusted local expert can save you thousands.
 
 Ready to take the next step? Contact me today!
 
 *— {realtor['name']}*
-*Partnered with Kenny Merdan · NEXA Lending*
+*Partnered with Kenny Merdan*
 
 ---
 *To enable AI-powered content, add your OpenAI API key to config.yaml*
