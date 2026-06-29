@@ -18,7 +18,7 @@ with st.sidebar:
             "✍️ Content Studio", "🎬 Video Upload", "📤 Publishing Center",
             "📋 Audit Center", "📧 Email Center", "📈 Analytics",
             "🤖 AI Suggestions", "🎯 Referrals", "🚀 Onboarding",
-            "🔗 Portal Links", "💳 Billing", "🔗 GHL Sync", "⚙️ Settings"
+            "🔗 Portal Links", "💳 Billing", "🔗 GHL Sync", "🏡 Realtor Portal", "⚙️ Settings"
         ],
         label_visibility="collapsed"
     )
@@ -303,6 +303,11 @@ elif nav == "🚀 Onboarding":
                     for step in steps:
                         icon = "✅" if step['completed'] else "⏳"
                         st.markdown(f"{icon} {step['description']}")
+
+# ── Realtor Portal ───────────────────────────────────────────────────────────
+elif nav == "🏡 Realtor Portal":
+    import portal
+    portal.render()
 
 # ── Settings ──────────────────────────────────────────────────────────────────
 elif nav == "⚙️ Settings":
