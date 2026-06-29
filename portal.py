@@ -2,6 +2,50 @@
 import streamlit as st
 from data_manager import DataManager
 
+
+def _fallback(realtor, content_type, topic, tone, hint=""):
+    loc = realtor.get('location', 'your area')
+    name = realtor['name']
+    if "Social" in content_type:
+        return f"""🏡 {topic}
+
+Looking to buy or sell in {loc}? I'm here to help every step of the way.
+
+📲 DM me or call to get started!
+
+#RealEstate #{loc.replace(' ','')} #HomeBuying #HomeSelling #Realtor"""
+    elif "Blog" in content_type:
+        return f"""# {topic}
+
+*By {name} · {loc}*
+
+Whether you're buying your first home or your fifth, navigating the real estate market in {loc} can feel overwhelming. Here's what you need to know.
+
+## Why This Matters
+
+The {loc} market is constantly evolving. Staying informed helps you make smarter decisions and avoid costly mistakes.
+
+## Key Takeaways
+
+1. **Work with a local expert** — local knowledge makes all the difference.
+2. **Get pre-approved early** — it gives you a competitive edge.
+3. **Don't skip the inspection** — it protects your investment.
+
+## Ready to Take the Next Step?
+
+I'm here to guide you through every stage of the process. Reach out today and let's talk about your goals.
+
+*— {name}*"""
+    else:  # GMB
+        return f"""🏡 {topic}
+
+{name} is here to help you navigate the {loc} real estate market with confidence.
+
+Whether buying, selling, or investing — you deserve an expert in your corner.
+
+📞 Call or message today to get started!"""
+
+
 st.set_page_config(page_title="Realtor Portal", page_icon="🏡", layout="wide")
 db = DataManager()
 
@@ -103,49 +147,6 @@ with tab_create:
             )
         else:
             st.info("Your generated content will appear here.")
-
-
-def _fallback(realtor, content_type, topic, tone, hint=""):
-    loc = realtor.get('location', 'your area')
-    name = realtor['name']
-    if "Social" in content_type:
-        return f"""🏡 {topic}
-
-Looking to buy or sell in {loc}? I'm here to help every step of the way.
-
-📲 DM me or call to get started!
-
-#RealEstate #{loc.replace(' ','')} #HomeBuying #HomeSelling #Realtor"""
-    elif "Blog" in content_type:
-        return f"""# {topic}
-
-*By {name} · {loc}*
-
-Whether you're buying your first home or your fifth, navigating the real estate market in {loc} can feel overwhelming. Here's what you need to know.
-
-## Why This Matters
-
-The {loc} market is constantly evolving. Staying informed helps you make smarter decisions and avoid costly mistakes.
-
-## Key Takeaways
-
-1. **Work with a local expert** — local knowledge makes all the difference.
-2. **Get pre-approved early** — it gives you a competitive edge.
-3. **Don't skip the inspection** — it protects your investment.
-
-## Ready to Take the Next Step?
-
-I'm here to guide you through every stage of the process. Reach out today and let's talk about your goals.
-
-*— {name}*"""
-    else:  # GMB
-        return f"""🏡 {topic}
-
-{name} is here to help you navigate the {loc} real estate market with confidence.
-
-Whether buying, selling, or investing — you deserve an expert in your corner.
-
-📞 Call or message today to get started!"""
 
 
 # ── MY DRAFTS ──────────────────────────────────────────────────────────────────
